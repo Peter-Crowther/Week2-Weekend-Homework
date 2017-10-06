@@ -1,6 +1,9 @@
+
+
 class Room
 attr_reader :room_name
   def initialize(room_name)
+
     @room_name = room_name
     @guests = []
     @songs = []
@@ -15,9 +18,21 @@ attr_reader :room_name
     return @songs.length()
   end
 
-
-
-
-
-
+  def add_song(new_song)
+    puts new_song.title()
+    @songs.push(new_song)
+  end
 end
+
+
+# class D
+#   def title()
+#     return "screw you"
+#   end
+# end
+#
+# room = Room.new(1)
+#
+# d = D.new()
+#
+# room.add_song(d)
