@@ -19,9 +19,13 @@ attr_reader :room_name
   end
 
   def add_song(new_song)
-    puts new_song.title()
     @songs.push(new_song)
   end
+
+  def add_guest(new_guest)
+    @guests.push(new_guest)
+  end
+
 end
 
 
