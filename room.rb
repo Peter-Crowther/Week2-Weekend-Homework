@@ -1,7 +1,9 @@
 class Room
-  def initialize
-  @guests = []
-  # @song = []
+attr_reader :room_name
+  def initialize(room_name)
+    @room_name = room_name
+    @guests = []
+    @songs = []
   end
 
 
@@ -9,7 +11,11 @@ class Room
     return @guests.length()
   end
 
-  
+  def number_of_songs()
+    return @songs.length()
+  end
+
+
 
 
 
