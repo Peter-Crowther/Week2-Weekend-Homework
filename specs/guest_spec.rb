@@ -21,7 +21,7 @@ class TestGuest < MiniTest::Test
   end
 
   def test_guest_has_cash
-    actual = guest.cash()
+    actual = @guest.cash()
     assert_equal(20, actual)
   end
 
