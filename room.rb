@@ -1,10 +1,11 @@
 
 
 class Room
-attr_reader :room_name
-  def initialize(room_name)
+attr_reader :room_name, :room_capacity
+  def initialize(room_name, room_capacity)
 
     @room_name = room_name
+    @room_capacity = room_capacity
     @guests = []
     @songs = []
   end
@@ -24,6 +25,17 @@ attr_reader :room_name
 
   def add_guest(new_guest)
     @guests.push(new_guest)
+  end
+
+  def remove_guest(guest)
+    @guests.delete(guest)
+  end
+
+  def room_full()
+    if number_of_guests >= @room_capacity
+      return "Sorry Pavarotti"
+    end
+
   end
 
 end
